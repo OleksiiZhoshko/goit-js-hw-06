@@ -6,12 +6,12 @@
 const inputFocuseChange = document.querySelector("#validation-input");
 
 const corectValueInput = () => {
-    if (inputFocuseChange.value.length < inputFocuseChange.dataset.length) {
-        inputFocuseChange.classList.add('invalid');
-        inputFocuseChange.classList.remove('valid');
-    } else {
+    if (inputFocuseChange.value.length == inputFocuseChange.dataset.length) {
         inputFocuseChange.classList.add('valid');
-        inputFocuseChange.classList.remove('invalid');
+    } else {
+        inputFocuseChange.classList.remove('valid'); 
+        inputFocuseChange.classList.add('invalid');
+               
     }
 };
 
