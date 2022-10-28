@@ -31,8 +31,8 @@ const userGatherInfo = (event) => {
   }
 
   console.table(userInfo);
+  event.currentTarget.reset();
 }
-
 
 formEl.addEventListener('submit', userGatherInfo);
 

@@ -5,8 +5,9 @@
 
 const inputFocuseChange = document.querySelector("#validation-input");
 
-const corectValueInput = () => {
-    if (inputFocuseChange.value.length == inputFocuseChange.dataset.length) {
+const corectValueInput = (event) => {
+    if (event.currentTarget.value.length === Number(inputFocuseChange.dataset.length)) {
+        inputFocuseChange.classList.remove('invalid');
         inputFocuseChange.classList.add('valid');
     } else {
         inputFocuseChange.classList.remove('valid'); 
